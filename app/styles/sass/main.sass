@@ -1,0 +1,116 @@
+@import config
+@import "blocks/**/*"
+
+.buttons
+    font-weight: 700
+    line-height: 21px
+    display: flex
+    align-items: center
+    margin-bottom: 40px
+    @media (max-width: 700px)
+        flex-direction: column
+        order: 2
+        margin-bottom: 0
+    &__btn
+        display: inline-block
+        color: $white
+        background-color: $accent
+        border-radius: 6px
+        padding: 13px 34px
+        border-color: transparent
+        transition: .3s 
+        margin: 0 61px 0 247px
+        box-shadow: 5px 6px 22px rgba(204, 61, 0, 0.24)
+        @media (max-width: 700px)
+            margin: 0 0 20px 0
+        &:hover
+            background-color: darken($accent, 5%)
+    &__link
+        color: $accent
+        text-decoration: underline
+        &:hover
+            text-decoration: none
+            color: $accent
+.title
+    color: $grey
+    font-size: 13px
+    line-height: 17px
+    font-weight: 400
+    margin-bottom: 0  
+    @media (max-width: 700px)
+        font-size: 10px
+        line-height: 13px
+
+.main
+    margin-top: 34px
+    margin-bottom: 44px
+    @media (max-width: 700px)
+        margin-top: 20px
+    &__inner
+        display: flex
+        flex-direction: column
+    &__text
+        margin-bottom: 40px
+        line-height: 21px
+        @media (max-width: 700px)
+            margin-bottom: 20px
+    &__group
+        padding: 0
+.list
+    list-style: none
+    padding: 0
+    margin-bottom: 24px
+    display: grid
+    grid-template-columns: 444px 1fr
+    grid-template-rows: auto auto auto auto auto
+    gap: 24px 32px
+    @media (max-width: 700px)
+        grid-template-columns: auto
+        gap: 14px 0
+    &__item
+        @media (max-width: 700px)
+            grid-column: 1/3
+    &__item-flags
+        img
+            filter: drop-shadow(1px 2px 5px rgba(138, 138, 138, 0.25))
+            margin-left: 8px
+            &:first-child
+                margin-left: 0
+        @media (max-width: 700px)
+            grid-column: 1/3
+    &__item-title
+        @extend .title
+    &__item-text
+        color: $darkBlue
+        line-height: 21px
+        font-weight: 700
+        margin-top: 4px
+        margin-bottom: 0
+        @media (max-width: 700px)
+            font-size: 13px
+            line-height: 17px
+.list__item--beforelast
+    @media (max-width: 700px) 
+        grid-column: 1/2
+        grid-row: 9/10
+.list__item--last
+    @media (max-width: 700px)
+        grid-column: 2/3
+        grid-row: 9/10
+.group
+    list-style: none
+    padding: 0
+    display: grid
+    grid-template-columns: 54px 54px 54px 54px
+    grid-template-rows: 25px 25px 25px 25px 25px
+    gap: 8px 20px
+    margin-top: 8px
+    @media (max-width: 700px)
+        gap: 8px 15px
+    &__title
+        @extend .title
+    &__item
+        background-color: $darkGrey
+        border-radius: 2px
+.hidden
+    display: none

@@ -1,0 +1,35 @@
+.header
+    max-height: 220px
+    background-color: $green
+    border-radius: 10px 10px 0px 0px
+    color: $white
+    @media (max-width: 700px)
+        min-height: 220px
+    &__inner
+        padding-top: 44px
+        @media (max-width: 700px)
+            padding-top: 20px
+    &__profile
+        display: flex
+        align-items: flex-start
+    &__avatar
+        width: 200px
+        height: 200px
+        border-radius: 10px
+        background: url('../images/dist/ava.jpg')
+        filter: drop-shadow(5px 8px 16px rgba(190, 190, 190, 0.25))
+        flex:  0 0 auto
+        @media (max-width: 700px)
+                width: 60px
+                height: 60px
+                border-radius: 4px
+                background: url('../images/dist/ava-mob.jpg')
+    &__name
+        margin-left: 44px
+        font-size: 31px
+        font-weight: 700
+        line-height: 44px
+        @media (max-width: 700px)
+            margin-left: 12px
+            font-size: 20px
+            line-height: 26px

@@ -1,0 +1,36 @@
+// USER VARIABLES SECTION
+
+$accent: #FF4C00 // Accent Color
+$green: #284622
+$white: #FFFFFF
+$grey: #7E7E7E
+$darkGrey: #C4C4C4
+$darkBlue: #031143
+$fontsize: 16px // Body Font Size
+$textcolor: #010514 // Text Color
+$lineheight: 1.65 // Document Line Height
+$userfont: roboto-oh5, sans-serif // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+@import 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap'
+// FONTS LOAD SECTION
+
+
+body
+	font-family: 'Montserrat', sans-serif;
+	font-size: $fontsize
+	line-height: $lineheight
+	color: $textcolor
+	min-width: 300px
+	position: relative
+	overflow-x: hidden
+
+.container
+	max-width: 904px
+	margin: 0 auto
+	padding: 0 44px
+	@media (max-width: 760px)
+		padding: 0 20px
